@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Person</title>
+</head>
+<body>
+<center>
+<h1>Add Person</h1>
+<form th:action="@{/person/add}" th:object="${person}" method="post">
+    <div>
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" th:field="*{nama}" required>
+    </div>
+    <div>
+        <label for="alamat">Alamat:</label>
+        <input type="text" id="alamat" th:field="*{alamat}" required>
+    </div>
+    <div>
+        <label for="nomorHandphone">Nomor Handphone:</label>
+        <input type="text" id="nomorHandphone" th:field="*{nomorHandphone}" required>
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+</center>
+</body>
+</html>
+
+
